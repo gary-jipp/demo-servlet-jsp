@@ -4,6 +4,7 @@ JSP's should always be buried in the WEB_INF folder, away from prying eyes.  Unf
 
 - Build with Maven before running to create the target/WebContent directory needed & copy web.xml  
 
+
 - This application uses the classic style of defining servlets and url's in web.xml rather than annotations. This allows for more control over params and keeps them in a central place.  
 
 
