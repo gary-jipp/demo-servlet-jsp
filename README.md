@@ -1,6 +1,6 @@
 # JSP - the right way.
 
-JSP's should always be buried in the WEB_INF folder, away from prying eyes.  Unfortunately  many JSP "tutorials" expose them to the outside world and the url contains ".jsp". The correct way is to have a servlet controller handle every request and then render the JSP using Request or Session Attributes.
+JSP's should always be buried in the WEB_INF folder, away from prying eyes.  Unfortunately  many JSP "tutorials" expose them to the outside world and the url contains ".jsp". The correct way is to have a controller servlet handle every request and then render the JSP using Request or Session Attributes.
 
 - Build with Maven before running, although it will probably run without a Maven build.  
 
