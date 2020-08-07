@@ -22,11 +22,15 @@
       <span class="data">${appName} ${version}</span> <!-- requestScope attributes set by controller servlet -->
     </div>
     <div>
-      <span class="text">Session Attribute:</span>
-      <span class="data">${sessionScope.name}</span>  <!-- sessionScope attribute -->
+      <span class="text">Server Details:</span>
+      <span class="data">${server}</span>
     </div>
     <div>
-      <span class="text">Request Attribute:</span>
+      <span class="text">Session Attribute:</span>
+      <span class="data">${sessionScope.name} (empty)</span>  <!-- sessionScope attribute (empty right now) -->
+    </div>
+    <div>
+      <span class="text">Another Request Attribute:</span>
       <span class="data">${requestScope.mydata}</span>  <!-- explicit requestScope attribute -->
     </div>
 

@@ -14,9 +14,12 @@ public class HelloServlet extends HttpServlet {
     // Save something to the request so our JSP can access it
     request.setAttribute("mydata", "This is some Data");
 
-    // Get the Application Dispay-Name from web.xml and save that
+    // Get the Application Display-Name from web.xml and save that
     String AppName = request.getServletContext().getServletContextName();
     request.setAttribute("appName", AppName);
+    
+    String server = request.getServletContext().getServerInfo();
+    request.setAttribute("server", server);
 
     // Get the version attribute and save to request object
     String version = request.getServletContext().getInitParameter("version");
