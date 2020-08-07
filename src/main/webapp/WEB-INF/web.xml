@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0"
+  xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+   http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+   
+	<!--  -->
+	<!-- Application Name -->
+	<display-name>WebShell Demo JSP App</display-name>
+	<description>Demo Web Application</description>
+	
+	<!--  Stuff we made up-->
+	<context-param>
+		<param-name>version</param-name>
+		<param-value>1.0.0</param-value>
+	</context-param>
+	
+ <!-- Servlet-class Mapping -->
+	<servlet>
+		<servlet-name>demo</servlet-name>
+		<servlet-class>servlet.HelloServlet</servlet-class>
+		<init-param>
+			<!-- This servlet uses a JSP page to merge into its output -->
+			<param-name>page</param-name>
+			<param-value>/WEB-INF/pages/HelloPage.jsp</param-value>
+		</init-param>
+	</servlet> 
+
+ <!-- Servlet-Url Path Mappings -->
+	<servlet-mapping>
+		<servlet-name>demo</servlet-name>
+		<url-pattern>/demo</url-pattern>
+	</servlet-mapping>
+	
+ <!-- Welcome Files -  What to run if no path specified -->
+ <welcome-file-list>
+  <welcome-file>demo</welcome-file>
+ </welcome-file-list>
+ 
+</web-app>
